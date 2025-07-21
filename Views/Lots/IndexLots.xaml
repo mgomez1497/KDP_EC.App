@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
+             x:Class="KDP_EC.App.Views.Lots.IndexLots"
+             Title="Lotes">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Menú lateral -->
+        <shared:SidebarMenu Grid.Column="0" />
+
+        <!-- Contenido principal -->
+        <ScrollView Grid.Column="1">
+            <VerticalStackLayout Spacing="25" Padding="30" VerticalOptions="Start">
+
+                <!-- Picker de fincas -->
+                <Picker x:Name="farmPickerLots"
+                        Title="Seleccione una finca"
+                        TitleColor="Gray" 
+                        SelectedIndexChanged="OnFarmSelected"/>
+
+                <!-- Botón para obtener lotes -->
+                <Button Text="Obtener Lotes"
+                        BackgroundColor="#007AFF"
+                        TextColor="White"
+                        Clicked="OnGetLots" />
+                
+                <Button Text="Sincronizar"
+                BackgroundColor="DarkGreen"
+                TextColor="White"
+                Clicked="OnSincronizarClicked"
+                />
+
+                <!-- Tabla de lotes -->
+                <CollectionView x:Name="lotsCollection">
+                    <CollectionView.Header>
+                        <Grid Padding="5" BackgroundColor="Green">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*" />
+                                <!-- Nombre del lote -->
+                                <ColumnDefinition Width="1.5*" />
+                                <!-- Hectáreas -->
+                                <ColumnDefinition Width="2*" />
+                                <!-- Distancia entre árboles -->
+                                <ColumnDefinition Width="1.5*" />
+                                <!-- Número de árboles -->
+                                <ColumnDefinition Width="2*" />
+                                <!-- Acciones -->
+                            </Grid.ColumnDefinitions>
+                            
+                            <Label Text="Nombre del lote" Grid.Column="0" 
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="Center" 
+                                   HorizontalTextAlignment="Center" />
+                            
+                            <Label Text="Hectáreas" Grid.Column="1" 
+                                   FontAttributes="Bold" 
+                                   HorizontalOptions="Center" 
+                                   HorizontalTextAlignment="Center" />
+                            
+                            <Label Text="Distancia entre árboles" Grid.Column="2" 
+                                   FontAttributes="Bold" 
+                                   HorizontalOptions="Center" 
+                                   HorizontalTextAlignment="Center" />
+                            
+                            <Label Text="Número de árboles" Grid.Column="3" 
+                                   FontAttributes="Bold" 
+                                   HorizontalOptions="Center" 
+                                   HorizontalTextAlignment="Center" />
+                            
+                            <Label Text="Acciones" Grid.Column="4" 
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="Center" 
+                                   HorizontalTextAlignment="Center" />
+                        </Grid>
+                    </CollectionView.Header>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <!-- Nombre del lote -->
+                                    <ColumnDefinition Width="1.5*" />
+                                    <!-- Hectáreas -->
+                                    <ColumnDefinition Width="2*" />
+                                    <!-- Distancia entre árboles -->
+                                    <ColumnDefinition Width="1.5*" />
+                                    <!-- Número de árboles -->
+                                    <ColumnDefinition Width="2*" />
+                                    <!-- Acciones -->
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding LotName, StringFormat='{}{0:F2}'}" Grid.Column="0"
+                                         HorizontalOptions="Center"
+                                         HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding HA, StringFormat='{}{0:F2}'}" Grid.Column="1"
+                                         HorizontalOptions="Center"
+                                         HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding TreesDistance, StringFormat='{}{0:F2}'}" Grid.Column="2"  
+                                       HorizontalOptions="Center"
+                                       HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding TreesNumber, StringFormat='{}{0:F2}'}" Grid.Column="3"
+                                         HorizontalOptions="Center"
+                                         HorizontalTextAlignment="Center"/>
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="Center"
+                                             Spacing="5"
+                                             Grid.Column="4">
+                                    <Button Text="Editar"
+                                            BackgroundColor="LightGray"
+                                            Clicked="OnUpdateView"
+                                            
+                                           />
+                                    <Button Text="Eliminar"
+                                            BackgroundColor="LightGray"
+                                            />            
+                                </StackLayout>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <Button x:Name="createLotButton"
+                    IsVisible="False"
+                    Text="+ Crear nuevo lote" 
+                    WidthRequest="200" HeightRequest="60"
+                    CornerRadius="30"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    FontSize="16"
+                    FontAttributes="Bold"        
+                    Margin="20"
+                    VerticalOptions="End"
+                    HorizontalOptions="End"
+                    Clicked="OnCreateLot"/>
+                
+            </VerticalStackLayout>
+            
+        </ScrollView>
+        
+    </Grid>
+    
+</ContentPage>

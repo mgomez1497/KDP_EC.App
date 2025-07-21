@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KDP_EC.App.Views.Shared.SidebarMenu">
+
+    <Grid>
+        <!-- Menú lateral -->
+        <StackLayout x:Name="SidebarContent"
+                     BackgroundColor="Black"
+                     Padding="20,40,20,20"
+                     Spacing="30"
+                     WidthRequest="250"
+                     TranslationX="0"
+                     ZIndex="0">
+
+            <!-- Título -->
+            <Label Text="Menú"
+                   FontSize="22"
+                   TextColor="White"
+                   HorizontalOptions="Center" />
+
+            <!-- Inicio -->
+            <Grid ColumnSpacing="15" Padding="10,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnMenuTapped" />
+                </Grid.GestureRecognizers>
+
+                <Label Text="&#xf015;"
+                       FontFamily="FASolid"
+                       TextColor="White"
+                       FontSize="20"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+
+                <Label Text="Inicio"
+                       Grid.Column="1"
+                       TextColor="White"
+                       FontSize="18"
+                       VerticalOptions="Center" />
+            </Grid>
+
+            <!-- Gestión Usuarios -->
+            <Grid x:Name="UserManagementGrid" ColumnSpacing="15" Padding="10,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="&#xf007;"
+                       FontFamily="FASolid"
+                       TextColor="White"
+                       FontSize="20"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+
+                <Label Text="Gestión Usuarios"
+                       Grid.Column="1"
+                       TextColor="White"
+                       FontSize="18"
+                       VerticalOptions="Center" />
+            </Grid>
+
+            <!-- Fincas -->
+            <Grid x:Name="FarmsManagementGrid" ColumnSpacing="15" Padding="10,5">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnFarmsManagementTapped" />
+                </Grid.GestureRecognizers>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="&#xf722;"
+                       FontFamily="FASolid"
+                       TextColor="White"
+                       FontSize="20"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+
+                <Label Text="Fincas"
+                       Grid.Column="1"
+                       TextColor="White"
+                       FontSize="18"
+                       VerticalOptions="Center" />
+            </Grid>
+
+            <Grid x:Name="LotsManagementGrid" ColumnSpacing="15" Padding="10,5">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnLotsManagementTapped" />
+                </Grid.GestureRecognizers>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="&#xf4d8;"
+                   FontFamily="FASolid"
+                   TextColor="White"
+                   FontSize="20"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+
+                <Label Text="Lotes"
+                   Grid.Column="1"
+                   TextColor="White"
+                   FontSize="18"
+                   VerticalOptions="Center" />
+            </Grid>
+
+            <Grid x:Name="FloweringRecordsManagementGrid" ColumnSpacing="15" Padding="10,5">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnFloweringManagementTapped" />
+                </Grid.GestureRecognizers>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="&#xf06c;"
+                   FontFamily="FASolid"
+                   TextColor="White"
+                   FontSize="20"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+
+                <Label Text="Floraciones"
+                   Grid.Column="1"
+                   TextColor="White"
+                   FontSize="18"
+                   VerticalOptions="Center" />
+            </Grid>
+
+            <Grid x:Name="RegisterManagementGrid" ColumnSpacing="15" Padding="10,5">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnRegisterManagmentTapped" />
+                </Grid.GestureRecognizers>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="&#xf155;"
+                   FontFamily="FASolid"
+                   TextColor="White"
+                   FontSize="20"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+
+                <Label Text="Registros"
+                    Grid.Column="1"
+                    TextColor="White"
+                    FontSize="18"
+                    VerticalOptions="Center" />
+            </Grid>
+
+
+            <Grid x:Name="ReportsManagementGrid" ColumnSpacing="15" Padding="10,5">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnReportsManagmentTapped"/>
+                </Grid.GestureRecognizers>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="&#xf080;"
+                FontFamily="FASolid"
+                TextColor="White"
+                FontSize="20"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+
+                <Label Text="Reportes"
+                Grid.Column="1"
+                TextColor="White"
+                FontSize="18"
+                VerticalOptions="Center" />
+            </Grid>
+
+            <!--<Grid x:Name="LogoutManagementGrid" ColumnSpacing="15" Padding="10,5">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnLogoutManagementTapped" />
+                </Grid.GestureRecognizers>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                -->
+            <!-- Ícono de Logout -->
+            <!--
+                <Label Text="&#xf2f5;"
+           FontFamily="FASolid"
+           TextColor="White"
+           FontSize="20"
+           VerticalOptions="Center"
+           HorizontalOptions="Center" />
+
+                -->
+            <!-- Texto -->
+            <!--
+                <Label Text="Cerrar sesión"
+           Grid.Column="1"
+           TextColor="White"
+           FontSize="18"
+           VerticalOptions="Center" />
+            </Grid>-->
+
+            
+
+
+
+
+
+        </StackLayout>
+
+        <!-- Botón para plegar menú -->
+        <Button Text="☰"
+                FontSize="28"
+                BackgroundColor="Transparent"
+                TextColor="White"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Margin="10,20,0,0"
+                Clicked="ToggleSidebarClicked"
+                ZIndex="1" />
+    </Grid>
+</ContentView>

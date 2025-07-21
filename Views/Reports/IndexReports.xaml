@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
+             x:Class="KDP_EC.App.Views.Reports.IndexReports"
+             Title="IndexReports">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Menú lateral -->
+        <shared:SidebarMenu Grid.Column="0" />
+
+        <!-- Contenido principal -->
+        <ScrollView Grid.Column="1">
+            <VerticalStackLayout Spacing="25" Padding="30" VerticalOptions="Start" HorizontalOptions="Center">
+
+                <!-- Título centrado -->
+                <Label Text="REPORTES"
+                       FontAttributes="Bold"
+                       FontSize="24"
+                       HorizontalOptions="Center" />
+
+                <!-- Picker -->
+                <Picker x:Name="farmPicker"
+                        Title="Seleccione una finca"
+                        TitleColor="Gray"
+                        WidthRequest="250"
+                        SelectedIndexChanged="OnFarmSelected" />
+
+                <!-- Botones de Reportes -->
+                <VerticalStackLayout Spacing="15" HorizontalOptions="Center">
+
+                    <Button Text="VOLUMEN &#x0a; DE CAFÉ"
+                            BackgroundColor="#5A2C0A"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            CornerRadius="10"
+                            WidthRequest="250"
+                            HeightRequest="60"
+                            Clicked="OnVolumenCafeClicked"
+                            
+                        />
+
+                    <Button Text="BALANCE &#x0a; COSTOS CAFÉ"
+                            BackgroundColor="#5A2C0A"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            CornerRadius="10"
+                            WidthRequest="250"
+                            HeightRequest="60"
+                            
+                        />
+
+                    <Button Text="INDICADORES &#x0a; DE PRODUCTIVIDAD"
+                            BackgroundColor="#5A2C0A"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            CornerRadius="10"
+                            WidthRequest="250"
+                            HeightRequest="60"
+                            Clicked="OnProductivityReportClicked"
+                        />
+
+                </VerticalStackLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+    </Grid>
+</ContentPage>

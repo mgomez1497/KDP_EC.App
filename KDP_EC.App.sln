@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KDP_EC.App", "KDP_EC.App.csproj", "{29DD476E-92F0-4C5C-BEE4-83EB942E4D87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KDP_EC.Core", "..\..\..\Documents\KDP_EC\KDP_EC.Core\KDP_EC.Core.csproj", "{29C6C639-920D-4CE8-BB93-CB2298A56922}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29DD476E-92F0-4C5C-BEE4-83EB942E4D87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29DD476E-92F0-4C5C-BEE4-83EB942E4D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29DD476E-92F0-4C5C-BEE4-83EB942E4D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29DD476E-92F0-4C5C-BEE4-83EB942E4D87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29C6C639-920D-4CE8-BB93-CB2298A56922}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29C6C639-920D-4CE8-BB93-CB2298A56922}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29C6C639-920D-4CE8-BB93-CB2298A56922}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29C6C639-920D-4CE8-BB93-CB2298A56922}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

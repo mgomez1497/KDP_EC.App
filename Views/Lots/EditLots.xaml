@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:KDP_EC.App.Converters"
+             xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
+             x:Class="KDP_EC.App.Views.Lots.EditLots"
+             
+             Title="EditLots">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:DecimalToStringConverter x:Key="DecimalToStringConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <shared:SidebarMenu Grid.Column="0" />
+        <ScrollView Grid.Column="1">
+            <VerticalStackLayout Grid.Column="1" Spacing="25" Padding="30" VerticalOptions="Start">
+            <Label Text="Nombre" />
+            <Entry Text="{Binding LotName}" />
+
+            <Label Text ="Variedad" />
+            <Picker x:Name="VariedadPicker"
+            ItemDisplayBinding="{Binding Name}"
+            Title="" />
+
+            <Label Text="Hectareas" />
+                <Entry  x:Name="HectareasEntry" Text="{Binding HA,StringFormat='{}{0:F2}'}" />
+
+            <Label Text="Distancia entre arboles" />
+                <Entry x:Name="DistanceTreesEntry" Text="{Binding TreesDistance, StringFormat='{}{0:F2}'}" />
+
+            <Label Text="Distancia entre surcos" />
+                <Entry x:Name="DistanceGrooveEntry" Text="{Binding GrooveDistance, StringFormat='{}{0:F2}'}" />
+
+            <Label Text="Densidad" />
+                <Entry x:Name="DensityEntry" Text="{Binding Density, StringFormat='{}{0:F2}'}" />
+
+            <Label Text="Numero de arboles" />
+                <Entry x:Name="TreesNumberEntry" Text="{Binding TreesNumber, StringFormat='{}{0:F2}'}" />
+
+            <Label Text="Tipo de Renovación" />
+            <Picker x:Name="TipoRenovacionPicker"
+            Title=""
+            ItemDisplayBinding="{Binding Name}" />
+  
+            <Label Text="Tipo de Lote" />
+            <Picker x:Name="TipoLotePicker"
+            Title=""
+            ItemDisplayBinding="{Binding Name}" />
+
+            <Label Text="Latitud" />
+            <Entry Text="{Binding Latitude, StringFormat='{}{0:F6}'}" Keyboard="Numeric" />
+
+            <Label Text="Longitud" />
+            <Entry Text="{Binding Longitude, StringFormat='{}{0:F6}'}" Keyboard="Numeric" />
+
+            <Button Text="Agregar Coordenadas"
+            BackgroundColor="#007AFF"
+            TextColor="White"
+            Clicked="OnAgregarCoordenadasClicked"
+            WidthRequest="180"
+            HorizontalOptions="Start"
+            Margin="0,10,0,0"/>
+
+            <Button Text="Guardar cambios"
+            BackgroundColor="Green"
+            TextColor="White"
+            Clicked="OnGuardarCambiosClicked"
+            WidthRequest="180"
+            HorizontalOptions="Start"
+            Margin="0,10,0,0"/> 
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
+             x:Class="KDP_EC.App.Views.FloweringRecords.CreateFloweringRecords"
+             Title="CreateFloweringRecords">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <shared:SidebarMenu Grid.Column="0" />
+        <ScrollView Grid.Column="1">
+            <VerticalStackLayout Grid.Column="1" Spacing="25" Padding="30" VerticalOptions="Start">
+                <Label Text="Fecha" />
+                <DatePicker x:Name="floweringDatePicker" Date="{Binding floweringDate}" />
+
+                <Picker x:Name="DepartamentosPicker"
+                Title="Seleccione un Departamento"
+                ItemDisplayBinding="{Binding Name}" 
+                SelectedIndexChanged="OnDepartamentoSelected"/>
+
+                <Picker x:Name="MunicipioPicker"
+                Title="Seleccione un Municipio"
+                ItemDisplayBinding="{Binding Name}" 
+                SelectedIndexChanged="TiposIngresosPicker_SelectedIndexChanged"/>
+
+                <Label Text="Latitud (Grados Decimales)" />
+                <Entry x:Name="LatitudeEntry" Text="{Binding Latitude, StringFormat='{}{0:F6}'}" Keyboard="Numeric" />
+
+                <Label Text="Longitud (Grados Decimales)" />
+                <Entry x:Name="LongitudeEntry" Text="{Binding Longitude, StringFormat='{}{0:F6}'}" Keyboard="Numeric" />
+
+                <Label Text="Altura(MSNM)" />
+                <Entry x:Name="ElevationEntry" Text="{Binding elevation, StringFormat='{}{0:F6}'}" Keyboard="Numeric" />
+
+                <Picker x:Name="TipoFloracionPicker"
+                 Title="Seleccione un tipo de floración"
+                 SelectedIndexChanged="TiposIngresosPicker_SelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>Alta</x:String>
+                        <x:String>Media</x:String>
+                        <x:String>Baja</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Button x:Name="ImagenButton"
+                Text="Adjuntar Imagen"
+                Clicked="ImagenButton_Clicked"
+                BackgroundColor="#e7763d" 
+                TextColor="White"
+                WidthRequest="180"
+                HorizontalOptions="Start"
+                Margin="0,10,0,0"
+                 />
+
+                <HorizontalStackLayout>
+                    <Button x:Name="GuardarButton"
+                    Text="Guardar"
+                    Clicked="GuardarButton_Clicked"
+                    BackgroundColor="#e7763d" 
+                    TextColor="White"
+                    WidthRequest="180"
+                    HorizontalOptions="Start"
+                    Margin="0,10,0,0"
+                    />
+
+                    <Button Text="Cancelar"
+                    BackgroundColor="#e7763d"
+                    TextColor="White"
+                    WidthRequest="180"
+                    HorizontalOptions="Start"
+                    Margin="0,10,0,0"/>
+
+                </HorizontalStackLayout>
+
+
+            </VerticalStackLayout>
+  </ScrollView>
+  </Grid>
+</ContentPage>

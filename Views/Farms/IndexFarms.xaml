@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
+             x:Class="KDP_EC.App.Views.Farms.IndexFarms"
+             Title="">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <shared:SidebarMenu Grid.Column="0" />
+
+        <VerticalStackLayout Grid.Column="1" Spacing="25" Padding="30" VerticalOptions="Start" >
+
+
+            <Picker x:Name="farmPicker"
+                    Title="Seleccione una finca"
+                    TitleColor="Gray">
+            </Picker>
+
+            <Button Text="Editar Coordenadas"
+                    BackgroundColor="#007AFF"
+                    TextColor="White"
+                    Clicked="OnUpdateView"
+                     />
+            <Button Text="Sincronizar"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    Clicked="OnSincronizarClicked"
+                     />
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,67 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
+             x:Class="KDP_EC.App.Views.Farms.EditFarms"
+             Title="">
+    
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <shared:SidebarMenu Grid.Column="0" />
+        <ScrollView Grid.Column="1">
+
+            <VerticalStackLayout Grid.Column="1" Spacing="25" Padding="30" VerticalOptions="Start">
+
+            <Label Text="Nombre" />
+            <Entry Text="{Binding Name}" IsReadOnly="True" />
+
+            <Label Text="Código" />
+            <Entry Text="{Binding Code}" IsReadOnly="True" />
+
+            <Label Text="FLP ID" />
+            <Entry Text="{Binding FLP_ID}" IsReadOnly="True" />
+
+            <Label Text="Status FLP" />
+            <Entry Text="{Binding StatusFLP}" IsReadOnly="True" />
+
+            <Label Text="Hasl" />
+                <Entry Text="{Binding HASL, StringFormat='{}{0:F2}'}" IsReadOnly="True" />
+
+            <Label Text="Área total (Ha)" />
+                <Entry Text="{Binding TotalAreaHa, StringFormat='{}{0:F2}'}" IsReadOnly="True" />
+
+            <Label Text="Área café (Ha)" />
+                <Entry Text="{Binding CoffeeAreaHa, StringFormat='{}{0:F2}'}" IsReadOnly="True" />
+
+            <Label Text="Productividad" />
+                <Entry Text="{Binding Productivity, StringFormat='{}{0:F2}'}" IsReadOnly="True" />
+
+            <Label Text="Latitud" />
+                <Entry Text="{Binding Latitude, StringFormat='{}{0:F6}'}" Keyboard="Numeric" />
+
+            <Label Text="Longitud" />
+                <Entry Text="{Binding Longitude, StringFormat='{}{0:F6}'}" Keyboard="Numeric" />
+
+                <Button Text="Agregar Coordenadas"
+        BackgroundColor="#007AFF"
+        TextColor="White"
+        Clicked="OnAgregarCoordenadasClicked"
+        WidthRequest="180"
+        HorizontalOptions="Start"
+        Margin="0,10,0,0"/>
+
+                <Button Text="Guardar cambios"
+        BackgroundColor="Green"
+        TextColor="White"
+        Clicked="OnGuardarCambiosClicked"
+        WidthRequest="180"
+        HorizontalOptions="Start"
+        Margin="0,10,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    </Grid>
+</ContentPage>

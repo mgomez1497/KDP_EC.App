@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
+             x:Class="KDP_EC.App.Views.Incomes.CreateIncomes"
+             Title="CreateIncomes">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <shared:SidebarMenu Grid.Column="0" />
+
+        <ScrollView Grid.Column="1">
+            <VerticalStackLayout Spacing="25" Padding="30" VerticalOptions="Start">
+                
+                    <Label Text="Ingreso por" FontAttributes="Bold" />
+                    <Picker x:Name="TiposIngresosPicker"
+                    Title="Seleccione un centro de costos"
+                    ItemDisplayBinding="{Binding Name}" 
+                    SelectedIndexChanged="TiposIngresosPicker_SelectedIndexChanged"/>
+
+                    <Label Text="Fecha"/>
+                    <DatePicker x:Name="FechaDatePicker" Date="{Binding Date}"/>
+
+                    <Label x:Name="KilogramosLabel" Text="Kilogramos vendidos"/>
+                    <Entry x:Name="KilogramosEntry" Placeholder="Ingrese los kilogramos vendidos" Keyboard="Numeric"/>
+
+                    <Label  Text="ValorTotal"/>
+                    <Entry x:Name="TotalValueEntry" Text="{Binding TotalValue}" Keyboard="Numeric" TextChanged="TotalValueEntry_TextChanged"/>
+
+                    <Label x:Name="ValorPorKgLabel" Text="Valor por kilogramo"/>
+                    <Entry x:Name="ValorPorKgEntry" Text="{Binding PercentageKg}" IsReadOnly="True" Keyboard="Numeric"/>
+
+                    <Label x:Name="FactorRendimientoLabel" Text="Factor de Rendimineto"/>
+                    <Entry x:Name="FactorRendimientoEntry" Text="{Binding PerformanceFactor}" IsReadOnly="True" Keyboard="Numeric"/>
+
+                    <Label x:Name="FacturaLabel" Text="Factura #"/>
+                    <Entry x:Name="FacturaEntry"  Text="{Binding Invoice}" Placeholder="Ingrese el número de factura"/>
+
+                    <Label x:Name="AlmendraSanaLabel" Text="%Almendra Sana"/>
+                    <Entry x:Name="AlmendraSanaEntry" Text="{Binding HealthyAlmondPercent}" IsReadOnly="True" Keyboard="Numeric"/>
+
+                    <Label x:Name="PasillaLabel" Text="%Pasilla"/>
+                    <Entry x:Name="PasillaEntry" Text="{Binding PoorCoffeePercent}" IsReadOnly="True" Keyboard="Numeric"/>
+
+                    <Label x:Name="MermaLabel" Text="%Merma"/>
+                    <Entry x:Name="MermaEntry" Text="{Binding DecreasePercent}" IsReadOnly="True" Keyboard="Numeric"/>
+
+
+                <HorizontalStackLayout>
+                    <Button x:Name="GuardarButton"
+                    Text="Guardar"
+                    Clicked="GuardarButton_Clicked"
+                    BackgroundColor="#80e7763d" 
+                    TextColor="White"
+                    WidthRequest="180"
+                    HorizontalOptions="Start"
+                    Margin="0,10,0,0"
+                    IsEnabled="False" />
+
+                    <Button Text="Cancelar"
+                    BackgroundColor="#e7763d"
+                    TextColor="White"
+                    WidthRequest="180"
+                    HorizontalOptions="Start"
+                    Margin="0,10,0,0"/>
+
+                </HorizontalStackLayout>
+                
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

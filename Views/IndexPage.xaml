@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
+             x:Class="KDP_EC.App.Views.IndexPage"
+             Title="">
+    <Grid>
+        <!-- Columnas: una para el sidebar, otra para el contenido -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Sidebar -->
+        <shared:SidebarMenu Grid.Column="0" />
+
+        <!-- Contenido principal -->
+        <VerticalStackLayout Grid.Column="1" Spacing="25" Padding="30" VerticalOptions="Center">
+          
+        </VerticalStackLayout>
+    </Grid>
+  
+</ContentPage>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
+             x:Class="KDP_EC.App.Views.FloweringRecords.IndexFloweringRecords"
+             Title="Floraciones"
+             BackgroundColor="#1E1E1E">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+       
+        <shared:SidebarMenu Grid.Column="0" />
+
+        
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            
+            <ScrollView Grid.Row="0">
+                <VerticalStackLayout Padding="30" Spacing="20">
+                    <Label Text="Listado de floraciones"
+               FontSize="26"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="White" />
+
+       
+                    
+                    <CollectionView ItemsSource="{Binding FloweringList}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="#2D2D2D"
+                           CornerRadius="12"
+                           Padding="15"
+                           Margin="0,5"
+                           HasShadow="False">
+                                    <VerticalStackLayout Spacing="8">
+                                        <Label Text="{Binding floweringDate, StringFormat='Fecha: {0:yyyy-MM-dd}'}"
+                                   TextColor="White"
+                                   FontSize="16" />
+                                        <Label Text="{Binding floweringType, StringFormat='Tipo: {0}'}"
+                                   TextColor="White"
+                                   FontSize="16" />
+                                        <Label Text="{Binding latitude, StringFormat='Latitud: {0:F6}'}"
+                                   TextColor="White"
+                                   FontSize="16" />
+                                        <Label Text="{Binding longitude, StringFormat='Longitud: {0:F6}'}"
+                                   TextColor="White"
+                                   FontSize="16" />
+                                        <Label Text="{Binding elevation, StringFormat='Elevación: {0}'}"
+                                   TextColor="White"
+                                   FontSize="16" />
+                                    </VerticalStackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+            </ScrollView>
+
+
+            <Grid Grid.Row="1" Padding="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Button Text="🔄 Sincronizar"
+                    Clicked="OnSincronizarClicked"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    HorizontalOptions="Start"
+                    WidthRequest="180"
+                    CornerRadius="20"
+                    Grid.Column="0"/>
+
+                <Button Text="Crear nueva floración"
+                    Clicked="OnCreateFlowClicked"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    CornerRadius="20"
+                    HeightRequest="50"
+                    WidthRequest="220"
+                    FontSize="16"
+                    HorizontalOptions="End"
+                    Grid.Column="1"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>

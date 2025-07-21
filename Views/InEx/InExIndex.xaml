@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
+             xmlns:microcharts="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             x:Class="KDP_EC.App.Views.InEx.InExIndex"
+             Title="InExIndex">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <shared:SidebarMenu Grid.Column="0" />
+
+        <ScrollView Grid.Column="1">
+            <VerticalStackLayout Spacing="25" Padding="30" VerticalOptions="Start">
+
+                <Picker x:Name="farmPickerInEx"
+                        Title="Seleccione una finca"
+                        TitleColor="Gray"
+                        SelectedIndexChanged="OnFarmSelected" />
+
+                <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+
+                    <!-- Botón Ingresos -->
+                    <Border Stroke="#4CAF50" Background="#4CAF50" StrokeThickness="1" 
+            StrokeShape="RoundRectangle 10"
+            WidthRequest="140" HeightRequest="50">
+                        <Grid>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnIngresosTapped" />
+                            </Grid.GestureRecognizers>
+                            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="8">
+                                <Label Text="&#xf155;" FontSize="18" FontFamily="FASolid" TextColor="White" />
+                                <Label Text="Ingresos" FontSize="14" TextColor="White" />
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </Border>
+
+                    <!-- Botón Egresos -->
+                    <Border Stroke="#F44336" Background="#F44336" StrokeThickness="1" 
+            StrokeShape="RoundRectangle 10"
+            WidthRequest="140" HeightRequest="50">
+                        <Grid>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnEgresosTapped" />
+                            </Grid.GestureRecognizers>
+                            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="8">
+                                <Label Text="&#xf555;" FontSize="18" FontFamily="FASolid" TextColor="White" />
+                                <Label Text="Egresos" FontSize="14" TextColor="White" />
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </Border>
+                    <Border Stroke="#2196F3" Background="#2196F3" StrokeThickness="1" 
+                            StrokeShape="RoundRectangle 10"
+                            WidthRequest="140" HeightRequest="50">
+                        <Grid>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnsyncTapped" />
+                            </Grid.GestureRecognizers>
+                            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="8">
+                                <Label Text="&#xf2f1;" FontSize="18" FontFamily="FASolid" TextColor="White" />
+                                <Label Text="Sincronizar" FontSize="14" TextColor="White" />
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </Border>
+
+
+                </HorizontalStackLayout>
+            <VerticalStackLayout>
+                    <Label Text="Ingresos:" FontSize="14" TextColor="White"/>
+                    <Label x:Name="IngresosValueLabel" FontSize="14" TextColor="White"/>
+                    <Label Text="Egresos:" FontSize="14" TextColor="White"/>
+                    <Label x:Name="EgresosValueLabel" FontSize="14" TextColor="White"/>
+                    <Label Text="Margen:" FontSize="14" TextColor="White"/>
+                    <Label x:Name="MargenValueLabel" FontSize="14" TextColor="White"/>
+                
+                <StackLayout Orientation="Vertical" Padding="10">
+                        <Label Text="Seleccione un año:" FontSize="14" TextColor="White"/>
+                        <Picker x:Name="yearPicker"
+             TitleColor="Gray"
+             TextColor="Black"
+             FontSize="14"
+             BackgroundColor="White"
+             SelectedIndexChanged="OnYearSelected"/>
+             
+                </StackLayout>
+            </VerticalStackLayout>
+                <StackLayout x:Name="ChartContainer" IsVisible="False">
+                    <Label Text="Gráfica de resumen:" FontSize="14" TextColor="White"/>
+
+                    <microcharts:ChartView x:Name="SummaryChart"
+                            HeightRequest="500"
+                            WidthRequest="500"
+                            BackgroundColor="White"/>
+
+                    <Label x:Name="NoDataLabel"
+                       Text="No existen datos para mostrar en la gráfica."
+                       TextColor="Red"
+                       FontAttributes="Bold"
+                       FontSize="14"
+                       IsVisible="False"
+                       HorizontalOptions="Center"
+                       Margin="10"/>
+                </StackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
