@@ -79,9 +79,21 @@ public partial class IndexReports : ContentPage
         }
     }
 
-
-
-
-
-
+    private async void OnBalanceReportClicked(object sender, EventArgs e)
+    {
+        if (farmPicker.SelectedItem is KDP_EC.Core.Models.Farms selectedFarm)
+        {
+            await Navigation.PushAsync(new BalanceCostCentersReports(selectedFarm.Id));
+        }
+        else
+        {
+            await DisplayAlert("Atención", "Seleccione una finca primero.", "OK");
+        }
+    }
 }
+
+
+
+
+
+

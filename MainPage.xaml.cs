@@ -54,6 +54,8 @@ namespace KDP_EC.App
         private readonly CoffeeSalesRepositoryAPI _coffeeSalesRepositoryAPI;
         private readonly ProductivityReportRepository _productivityReportRepository;
         private readonly ProductivityReportRepositoryAPI _productivityReportRepositoryAPI;
+        private readonly BalanceCostCentersRepository _balanceCostCentersRepository;
+        private readonly BalanceCostCentersRepositoryAPI _balanceCostCentersRepositoryAPI;
 
 
 
@@ -101,7 +103,9 @@ namespace KDP_EC.App
             IncomesRepository incomesRepository,
             IncomesRepositoryAPI incomesRepositoryAPI,
             ProductivityReportRepository productivityReportRepository,
-            ProductivityReportRepositoryAPI productivityReportRepositoryAPI
+            ProductivityReportRepositoryAPI productivityReportRepositoryAPI,
+            BalanceCostCentersRepository balanceCostCentersRepository,
+            BalanceCostCentersRepositoryAPI balanceCostCentersRepositoryAPI
 
             )
         {
@@ -146,6 +150,9 @@ namespace KDP_EC.App
             _coffeeSalesRepositoryAPI = coffeeSalesRepositoryAPI;
             _productivityReportRepository = productivityReportRepository;
             _productivityReportRepositoryAPI = productivityReportRepositoryAPI;
+            _balanceCostCentersRepository = balanceCostCentersRepository;
+            _balanceCostCentersRepositoryAPI = balanceCostCentersRepositoryAPI;
+
 
             InitializeComponent();
 
@@ -252,6 +259,8 @@ namespace KDP_EC.App
                     var ProductivityReportResponse = await _productivityReportRepositoryAPI.ObtenerProductivityReports(farm.Id);
                     await _productivityReportRepository.SaveProductivityReportsLocally(ProductivityReportResponse);
 
+                    var BasicCostCenters = await _balanceCostCentersRepositoryAPI.ObtenerBalanceCC(farm.Id);
+                    await _balanceCostCentersRepository.SaveBalanceCostCentersLocally(BasicCostCenters);
                 }
             }
             else

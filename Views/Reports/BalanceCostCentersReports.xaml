@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
+             x:Class="KDP_EC.App.Views.Reports.BalanceCostCentersReports"
+             Title="BalanceCostCentersReports">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        
+        <shared:SidebarMenu Grid.Column="0" />
+
+        
+        <ScrollView Grid.Column="1">
+            <VerticalStackLayout Spacing="25" Padding="30" VerticalOptions="Start" HorizontalOptions="Center">
+                <Label Text="Reporte de Ventas de Café"
+                 FontSize="24"
+                 HorizontalOptions="Center"
+                 FontAttributes="Bold" />
+
+                <Picker x:Name="yearPicker"
+                Title="Seleccione un año"
+                TitleColor="Gray"
+                WidthRequest="200"
+                HorizontalOptions="Center" />
+
+                <CollectionView x:Name="reportListView">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BorderColor="DarkGray"
+                                   CornerRadius="10"
+                                   Margin="10"
+                                   Padding="15"
+                                   HasShadow="True">
+                                <VerticalStackLayout Padding="10,5">
+                                    <Label Text="{Binding CostCenterName}"
+                                           FontSize="18"
+                                           FontAttributes="Bold"
+                                           TextColor="DarkGreen" />
+                                    <Grid ColumnDefinitions="*,*">
+                                        <VerticalStackLayout Grid.Column="0" HorizontalOptions="Start">
+                                            <Label Text="Promedio Mi finca:" />
+                                            <Label Text="{Binding FarmAverage, StringFormat='{0:F2}'}" />
+                                        </VerticalStackLayout>
+                                        <VerticalStackLayout Grid.Column="1" HorizontalOptions="End">
+                                            <Label Text="Promedio Otras Fincas:" />
+                                            <Label Text="{Binding ExportAverage, StringFormat='{0:F2}'}" />
+                                        </VerticalStackLayout>
+                                    </Grid>
+                                </VerticalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+    </Grid>
+</ContentPage>

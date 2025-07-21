@@ -69,6 +69,8 @@ namespace KDP_EC.App
             builder.Services.AddSingleton<Lots_VarietysRepositoryAPI>();
             builder.Services.AddSingleton<ProductivityReportRepositoryAPI>();
             builder.Services.AddSingleton<ProductivityReportRepository>();
+            builder.Services.AddSingleton<BalanceCostCentersRepositoryAPI>();
+            builder.Services.AddSingleton<BalanceCostCentersRepository>();
 
 
             return builder.Build();

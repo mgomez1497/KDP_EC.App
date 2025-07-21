@@ -119,6 +119,9 @@
 	  <MauiXaml Update="Views\Lots\IndexLots.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Reports\BalanceCostCentersReports.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Reports\CoffeeSalesRep.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

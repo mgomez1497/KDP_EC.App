@@ -51,7 +51,7 @@
                             CornerRadius="10"
                             WidthRequest="250"
                             HeightRequest="60"
-                            
+                            Clicked="OnBalanceReportClicked"
                         />
 
                     <Button Text="INDICADORES &#x0a; DE PRODUCTIVIDAD"
