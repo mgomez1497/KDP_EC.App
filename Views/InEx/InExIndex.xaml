@@ -70,15 +70,15 @@
 
                 </HorizontalStackLayout>
             <VerticalStackLayout>
-                    <Label Text="Ingresos:" FontSize="14" TextColor="White"/>
-                    <Label x:Name="IngresosValueLabel" FontSize="14" TextColor="White"/>
-                    <Label Text="Egresos:" FontSize="14" TextColor="White"/>
-                    <Label x:Name="EgresosValueLabel" FontSize="14" TextColor="White"/>
-                    <Label Text="Margen:" FontSize="14" TextColor="White"/>
-                    <Label x:Name="MargenValueLabel" FontSize="14" TextColor="White"/>
+                    <Label Text="Ingresos:" FontSize="14" TextColor="{StaticResource Black}"/>
+                    <Label x:Name="IngresosValueLabel" FontSize="14" TextColor="{StaticResource Black}"/>
+                    <Label Text="Egresos:" FontSize="14" TextColor="{StaticResource Black}"/>
+                    <Label x:Name="EgresosValueLabel" FontSize="14" TextColor="{StaticResource Black}"/>
+                    <Label Text="Margen:" FontSize="14" TextColor="{StaticResource Black}"/>
+                    <Label x:Name="MargenValueLabel" FontSize="14" TextColor="{StaticResource Black}"/>
                 
                 <StackLayout Orientation="Vertical" Padding="10">
-                        <Label Text="Seleccione un año:" FontSize="14" TextColor="White"/>
+                        <Label Text="Seleccione un año:" FontSize="14" TextColor="{StaticResource Black}"/>
                         <Picker x:Name="yearPicker"
              TitleColor="Gray"
              TextColor="Black"
@@ -89,12 +89,13 @@
                 </StackLayout>
             </VerticalStackLayout>
                 <StackLayout x:Name="ChartContainer" IsVisible="False">
-                    <Label Text="Gráfica de resumen:" FontSize="14" TextColor="White"/>
+                    <Label Text="Gráfica de resumen:" FontSize="14" TextColor="{StaticResource Black}"/>
 
                     <microcharts:ChartView x:Name="SummaryChart"
                             HeightRequest="500"
                             WidthRequest="500"
-                            BackgroundColor="White"/>
+                                           
+                            BackgroundColor="{StaticResource Black}"/>
 
                     <Label x:Name="NoDataLabel"
                        Text="No existen datos para mostrar en la gráfica."

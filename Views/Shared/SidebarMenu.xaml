@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="KDP_EC.App.Views.Shared.SidebarMenu">
+             x:Class="KDP_EC.App.Views.Shared.SidebarMenu"
+             BackgroundColor="{StaticResource Primary}">
 
     <Grid>
         <!-- Menú lateral -->
         <StackLayout x:Name="SidebarContent"
-                     BackgroundColor="Black"
-                     Padding="20,40,20,20"
-                     Spacing="30"
-                     WidthRequest="250"
-                     TranslationX="0"
-                     ZIndex="0">
+             BackgroundColor="{StaticResource Primary}"
+             Padding="20,40,20,20"
+             Spacing="30"
+             WidthRequest="250"
+             TranslationX="0"
+             ZIndex="0">
 
             <!-- Título -->
             <Label Text="Menú"
                    FontSize="22"
-                   TextColor="White"
+                   TextColor="{StaticResource Black}"
                    HorizontalOptions="Center" />
 
             <!-- Inicio -->
@@ -32,14 +33,14 @@
 
                 <Label Text="&#xf015;"
                        FontFamily="FASolid"
-                       TextColor="White"
+                       TextColor="{StaticResource Black}"
                        FontSize="20"
                        VerticalOptions="Center"
                        HorizontalOptions="Center" />
 
                 <Label Text="Inicio"
                        Grid.Column="1"
-                       TextColor="White"
+                       TextColor="{StaticResource Black}"
                        FontSize="18"
                        VerticalOptions="Center" />
             </Grid>
@@ -53,14 +54,14 @@
 
                 <Label Text="&#xf007;"
                        FontFamily="FASolid"
-                       TextColor="White"
+                      TextColor="{StaticResource Black}"
                        FontSize="20"
                        VerticalOptions="Center"
                        HorizontalOptions="Center" />
 
                 <Label Text="Gestión Usuarios"
                        Grid.Column="1"
-                       TextColor="White"
+                       TextColor="{StaticResource Black}"
                        FontSize="18"
                        VerticalOptions="Center" />
             </Grid>
@@ -78,14 +79,14 @@
 
                 <Label Text="&#xf722;"
                        FontFamily="FASolid"
-                       TextColor="White"
+                       TextColor="{StaticResource Black}"
                        FontSize="20"
                        VerticalOptions="Center"
                        HorizontalOptions="Center" />
 
                 <Label Text="Fincas"
                        Grid.Column="1"
-                       TextColor="White"
+                       TextColor="{StaticResource Black}"
                        FontSize="18"
                        VerticalOptions="Center" />
             </Grid>
@@ -102,14 +103,14 @@
 
                 <Label Text="&#xf4d8;"
                    FontFamily="FASolid"
-                   TextColor="White"
+                   TextColor="#2e7d32"
                    FontSize="20"
                    VerticalOptions="Center"
                    HorizontalOptions="Center" />
 
                 <Label Text="Lotes"
                    Grid.Column="1"
-                   TextColor="White"
+                   TextColor="{StaticResource Black}"
                    FontSize="18"
                    VerticalOptions="Center" />
             </Grid>
@@ -126,14 +127,14 @@
 
                 <Label Text="&#xf06c;"
                    FontFamily="FASolid"
-                   TextColor="White"
+                   TextColor="#2e7d32"
                    FontSize="20"
                    VerticalOptions="Center"
                    HorizontalOptions="Center" />
 
                 <Label Text="Floraciones"
                    Grid.Column="1"
-                   TextColor="White"
+                   TextColor="{StaticResource Black}"
                    FontSize="18"
                    VerticalOptions="Center" />
             </Grid>
@@ -150,14 +151,14 @@
 
                 <Label Text="&#xf155;"
                    FontFamily="FASolid"
-                   TextColor="White"
+                   TextColor="{StaticResource Black}"
                    FontSize="20"
                    VerticalOptions="Center"
                    HorizontalOptions="Center" />
 
                 <Label Text="Registros"
                     Grid.Column="1"
-                    TextColor="White"
+                    TextColor="{StaticResource Black}"
                     FontSize="18"
                     VerticalOptions="Center" />
             </Grid>
@@ -175,14 +176,14 @@
 
                 <Label Text="&#xf080;"
                 FontFamily="FASolid"
-                TextColor="White"
+                TextColor="{StaticResource Black}"
                 FontSize="20"
                 VerticalOptions="Center"
                 HorizontalOptions="Center" />
 
                 <Label Text="Reportes"
                 Grid.Column="1"
-                TextColor="White"
+                TextColor="{StaticResource Black}"
                 FontSize="18"
                 VerticalOptions="Center" />
             </Grid>
@@ -202,7 +203,7 @@
             <!--
                 <Label Text="&#xf2f5;"
            FontFamily="FASolid"
-           TextColor="White"
+           TextColor="{StaticResource Black}"
            FontSize="20"
            VerticalOptions="Center"
            HorizontalOptions="Center" />
@@ -212,7 +213,7 @@
             <!--
                 <Label Text="Cerrar sesión"
            Grid.Column="1"
-           TextColor="White"
+           TextColor="{StaticResource Black}"
            FontSize="18"
            VerticalOptions="Center" />
             </Grid>-->
@@ -229,7 +230,7 @@
         <Button Text="☰"
                 FontSize="28"
                 BackgroundColor="Transparent"
-                TextColor="White"
+                TextColor="{StaticResource Black}"
                 HorizontalOptions="Start"
                 VerticalOptions="Start"
                 Margin="10,20,0,0"

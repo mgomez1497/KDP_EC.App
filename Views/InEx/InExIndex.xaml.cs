@@ -223,16 +223,16 @@ public partial class InExIndex : ContentPage
             Label = "Ingresos",
             ValueLabel = ingresos.ToString("N0"),
             Color = SKColor.Parse("#4CAF50"),
-            TextColor = SKColor.Parse("#FFFFFF"),
-            ValueLabelColor = SKColor.Parse("#FFFFFF")
+            TextColor = SKColor.Parse("#000000"),
+            ValueLabelColor = SKColor.Parse("#000000")
         },
         new ChartEntry((float)egresos)
         {
             Label = "Egresos",
             ValueLabel = egresos.ToString("N0"),
             Color = SKColor.Parse("#F44336"),
-            TextColor = SKColor.Parse("#FFFFFF"),
-            ValueLabelColor = SKColor.Parse("#FFFFFF")
+            TextColor = SKColor.Parse("#000000"),
+            ValueLabelColor = SKColor.Parse("#000000")
         }
     };
 

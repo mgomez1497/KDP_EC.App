@@ -5,7 +5,7 @@
              x:Class="KDP_EC.App.MainPage"
              Title=""
              Shell.NavBarIsVisible="False"
-             BackgroundColor="White">
+             BackgroundColor="{StaticResource Primary}">
 
     <ContentPage.Resources>
         <Style x:Key="EntryEstilo" TargetType="Entry">
