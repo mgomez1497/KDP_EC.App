@@ -10,27 +10,27 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <!-- Menú lateral -->
+       
         <shared:SidebarMenu Grid.Column="0" />
 
-        <!-- Contenido principal -->
+        
         <ScrollView Grid.Column="1">
             <VerticalStackLayout Spacing="25" Padding="30" VerticalOptions="Start" HorizontalOptions="Center">
 
-                <!-- Título centrado -->
+                
                 <Label Text="REPORTES"
                        FontAttributes="Bold"
                        FontSize="24"
                        HorizontalOptions="Center" />
 
-                <!-- Picker -->
+                
                 <Picker x:Name="farmPicker"
                         Title="Seleccione una finca"
                         TitleColor="Gray"
                         WidthRequest="250"
                         SelectedIndexChanged="OnFarmSelected" />
 
-                <!-- Botones de Reportes -->
+                
                 <VerticalStackLayout Spacing="15" HorizontalOptions="Center">
 
                     <Button Text="VOLUMEN &#x0a; DE CAFÉ"

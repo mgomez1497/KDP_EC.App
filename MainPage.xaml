@@ -30,14 +30,14 @@
     </ContentPage.Resources>
 
     <Grid>
-        <!-- Fondo -->
+        
         <Image Source="background.jpg"
                Aspect="AspectFill"
                Opacity="1"
                HorizontalOptions="Fill"
                VerticalOptions="Fill" />
 
-        <!-- Contenido -->
+        
         <Grid HorizontalOptions="Center" VerticalOptions="Center">
             <Border Stroke="Transparent"
                     StrokeThickness="0"
