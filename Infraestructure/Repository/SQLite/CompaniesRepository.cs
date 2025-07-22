@@ -42,12 +42,15 @@ namespace KDP_EC.App.Infraestructure.Repository.SQLite
 
         public async Task SaveCompaniesLocally(List<Company> companies)
         {
-            await InitializeAsync(); 
-            await _db.DeleteAllAsync<Company>(); 
-            await _db.InsertAllAsync(companies);
-            
-        }
+            await InitializeAsync();
 
+            await _db.DeleteAllAsync<Company>();
+
+            foreach (var company in companies)
+            {
+                await _db.InsertAsync(company);
+            }
+        }
         public async Task<List<Company>> GetLocalCompanies(Guid companyId)
         {
             await InitializeAsync();

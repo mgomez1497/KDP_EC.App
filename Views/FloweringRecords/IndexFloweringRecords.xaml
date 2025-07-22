@@ -4,7 +4,7 @@
              xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
              x:Class="KDP_EC.App.Views.FloweringRecords.IndexFloweringRecords"
              Title="Floraciones"
-             BackgroundColor="#1E1E1E">
+             BackgroundColor="{StaticResource Primary}">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -29,7 +29,7 @@
                FontSize="26"
                FontAttributes="Bold"
                HorizontalOptions="Center"
-               TextColor="White" />
+               TextColor="Black" />
 
        
                     
@@ -37,7 +37,7 @@
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <Frame BackgroundColor="#2D2D2D"
-                           CornerRadius="12"
+                           CornerRadius="10"
                            Padding="15"
                            Margin="0,5"
                            HasShadow="False">

@@ -4,7 +4,8 @@
              xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
              xmlns:microcharts="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
              x:Class="KDP_EC.App.Views.InEx.InExIndex"
-             Title="InExIndex">
+             Title="InExIndex"
+             BackgroundColor="{StaticResource Primary}">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -19,7 +20,8 @@
 
                 <Picker x:Name="farmPickerInEx"
                         Title="Seleccione una finca"
-                        TitleColor="Gray"
+                        TitleColor="Black"
+                        BackgroundColor="White"
                         SelectedIndexChanged="OnFarmSelected" />
 
                 <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
@@ -88,15 +90,28 @@
              
                 </StackLayout>
             </VerticalStackLayout>
-                <StackLayout x:Name="ChartContainer" IsVisible="False">
-                    <Label Text="Gráfica de resumen:" FontSize="14" TextColor="{StaticResource Black}"/>
+                <StackLayout x:Name="ChartContainer"
+             IsVisible="False"
+             BackgroundColor="#1E1E1E"
+             Padding="10"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="FillAndExpand"
+             Spacing="20">
 
-                    <microcharts:ChartView x:Name="SummaryChart"
-                            HeightRequest="500"
-                            WidthRequest="500"
-                                           
-                            BackgroundColor="{StaticResource Black}"/>
+                    <Label 
+                    Text="Gráfica de resumen:" 
+                    HorizontalOptions="Center"
+                    FontSize="Large"
+                    TextColor="White"/>
 
+                    <!-- GRAFICO CENTRADO Y GRANDE -->
+                    <microcharts:ChartView 
+                        x:Name="SummaryChart"
+                        HeightRequest="250"
+                        Margin="10"
+                        VerticalOptions="FillAndExpand"/>
+
+                    <!-- MENSAJE DE NO DATOS -->
                     <Label x:Name="NoDataLabel"
                        Text="No existen datos para mostrar en la gráfica."
                        TextColor="Red"
@@ -104,7 +119,7 @@
                        FontSize="14"
                        IsVisible="False"
                        HorizontalOptions="Center"
-                       Margin="10"/>
+                       Margin="10" />
                 </StackLayout>
             </VerticalStackLayout>
         </ScrollView>

@@ -190,4 +190,9 @@ public partial class CreateExpenses : ContentPage
             }
         }
     }
+
+    private async void Cancelar_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync(); 
+    }
 }

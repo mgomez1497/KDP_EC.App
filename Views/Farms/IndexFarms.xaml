@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
              x:Class="KDP_EC.App.Views.Farms.IndexFarms"
-             Title="">
+             Title=""
+             BackgroundColor="{StaticResource Primary}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -16,16 +17,17 @@
 
             <Picker x:Name="farmPicker"
                     Title="Seleccione una finca"
+                    BackgroundColor="White"
                     TitleColor="Gray">
             </Picker>
 
             <Button Text="Editar Coordenadas"
-                    BackgroundColor="#007AFF"
+                    BackgroundColor="#07BB00"
                     TextColor="White"
                     Clicked="OnUpdateView"
                      />
             <Button Text="Sincronizar"
-                    BackgroundColor="Green"
+                    BackgroundColor="DarkGreen"
                     TextColor="White"
                     Clicked="OnSincronizarClicked"
                      />

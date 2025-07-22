@@ -33,7 +33,7 @@
 
                 <Label Text="&#xf015;"
                        FontFamily="FASolid"
-                       TextColor="{StaticResource Black}"
+                       TextColor="YellowGreen"
                        FontSize="20"
                        VerticalOptions="Center"
                        HorizontalOptions="Center" />
@@ -45,7 +45,7 @@
                        VerticalOptions="Center" />
             </Grid>
 
-            <!-- Gestión Usuarios -->
+            <!-- Gestión Usuarios --><!--
             <Grid x:Name="UserManagementGrid" ColumnSpacing="15" Padding="10,5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="30"/>
@@ -64,7 +64,7 @@
                        TextColor="{StaticResource Black}"
                        FontSize="18"
                        VerticalOptions="Center" />
-            </Grid>
+            </Grid>-->
 
             <!-- Fincas -->
             <Grid x:Name="FarmsManagementGrid" ColumnSpacing="15" Padding="10,5">
@@ -79,7 +79,7 @@
 
                 <Label Text="&#xf722;"
                        FontFamily="FASolid"
-                       TextColor="{StaticResource Black}"
+                       TextColor="IndianRed"
                        FontSize="20"
                        VerticalOptions="Center"
                        HorizontalOptions="Center" />
@@ -103,7 +103,7 @@
 
                 <Label Text="&#xf4d8;"
                    FontFamily="FASolid"
-                   TextColor="#2e7d32"
+                   TextColor="RosyBrown"
                    FontSize="20"
                    VerticalOptions="Center"
                    HorizontalOptions="Center" />
@@ -151,7 +151,7 @@
 
                 <Label Text="&#xf155;"
                    FontFamily="FASolid"
-                   TextColor="{StaticResource Black}"
+                   TextColor="DarkOliveGreen"
                    FontSize="20"
                    VerticalOptions="Center"
                    HorizontalOptions="Center" />
@@ -176,7 +176,7 @@
 
                 <Label Text="&#xf080;"
                 FontFamily="FASolid"
-                TextColor="{StaticResource Black}"
+                TextColor="CadetBlue"
                 FontSize="20"
                 VerticalOptions="Center"
                 HorizontalOptions="Center" />

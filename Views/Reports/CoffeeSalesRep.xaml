@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
              x:Class="KDP_EC.App.Views.Reports.CoffeeSalesRep"
-             Title="CoffeeSalesRep">
+             Title="CoffeeSalesRep"
+             BackgroundColor="{StaticResource Primary}">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -35,7 +36,8 @@
                 <CollectionView x:Name="reportListView">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Frame BorderColor="DarkGray"
+                            <Frame BackgroundColor="#2D2D2D" 
+                                BorderColor="DarkGray"
                                    CornerRadius="10"
                                    Margin="10"
                                    Padding="15"
@@ -46,10 +48,10 @@
                                            FontAttributes="Bold"
                                            TextColor="DarkGreen" />
 
-                                    <Label Text="{Binding KgCereza, StringFormat='Kg Cereza: {0:F2}'}" />
-                                    <Label Text="{Binding KgPergamino, StringFormat='Kg Pergamino: {0:F2}'}" />
-                                    <Label Text="{Binding Percents, StringFormat='Porcentaje: {0:F2}%'}" />
-                                    <Label Text="{Binding ConvertFactor, StringFormat='Factor de Conversión: {0:F2}'}" />
+                                    <Label Text="{Binding KgCereza, StringFormat='Kg Cereza: {0:F2}'}"  TextColor="White"/>
+                                    <Label Text="{Binding KgPergamino, StringFormat='Kg Pergamino: {0:F2}'}"  TextColor="White" />
+                                    <Label Text="{Binding Percents, StringFormat='Porcentaje: {0:F2}%'}"  TextColor="White"/>
+                                    <Label Text="{Binding ConvertFactor, StringFormat='Factor de Conversión: {0:F2}'}"  TextColor="White" />
                                 </VerticalStackLayout>
                             </Frame>
                         </DataTemplate>

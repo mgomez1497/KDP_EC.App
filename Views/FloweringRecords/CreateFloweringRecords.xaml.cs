@@ -294,6 +294,11 @@ public partial class CreateFloweringRecords : ContentPage
         }
     }
 
+    private async void Cancelar_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync(); 
+    }
+
 
 }
 

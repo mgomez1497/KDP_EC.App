@@ -125,7 +125,7 @@ public partial class InExIndex : ContentPage
 
     private async void TryLoadIncomeExpenseSummary()
     {
-        ChartContainer.IsVisible = false; // Oculta por defecto
+        ChartContainer.IsVisible = false; 
 
         if (_selectedFarm == null || _selectedYear == 0)
         {
@@ -198,23 +198,22 @@ public partial class InExIndex : ContentPage
 
         yearPicker.ItemsSource = years;
 
-        // Selecciona el año actual si no hay uno ya seleccionado
-        //if (_selectedYear == 0)
-        //    _selectedYear = currentYear;
+      
     }
+
 
     private void MostrarGrafico(decimal ingresos, decimal egresos)
     {
-        ChartContainer.IsVisible = true; // Mostrar el contenedor sí o sí
+        ChartContainer.IsVisible = true;
 
         if (ingresos == 0 && egresos == 0)
         {
             SummaryChart.Chart = null;
-            NoDataLabel.IsVisible = true; 
+            NoDataLabel.IsVisible = true;
             return;
         }
 
-        NoDataLabel.IsVisible = false; 
+        NoDataLabel.IsVisible = false;
 
         var entries = new List<ChartEntry>
     {
@@ -222,17 +221,17 @@ public partial class InExIndex : ContentPage
         {
             Label = "Ingresos",
             ValueLabel = ingresos.ToString("N0"),
-            Color = SKColor.Parse("#4CAF50"),
-            TextColor = SKColor.Parse("#000000"),
-            ValueLabelColor = SKColor.Parse("#000000")
+            Color = SKColor.Parse("#07BB00"),
+            TextColor = SKColor.Parse("#FFFFFF"),
+            ValueLabelColor = SKColor.Parse("#FFFFFF")
         },
         new ChartEntry((float)egresos)
         {
             Label = "Egresos",
             ValueLabel = egresos.ToString("N0"),
             Color = SKColor.Parse("#F44336"),
-            TextColor = SKColor.Parse("#000000"),
-            ValueLabelColor = SKColor.Parse("#000000")
+            TextColor = SKColor.Parse("#FFFFFF"),
+            ValueLabelColor = SKColor.Parse("#FFFFFF")
         }
     };
 
@@ -241,7 +240,10 @@ public partial class InExIndex : ContentPage
             Entries = entries,
             LabelTextSize = 30,
             LabelColor = SKColor.Parse("#FFFFFF"),
-            BackgroundColor = SKColors.Transparent
+            BackgroundColor = SKColor.Parse("#1E1E1E"),
+            Margin = 10, // margen para evitar corte de textos
+            LabelMode = LabelMode.LeftAndRight, // o .AllSegments, según gusto
+            IsAnimated = false // opcional, desactiva animación si retrasa render
         };
     }
 }

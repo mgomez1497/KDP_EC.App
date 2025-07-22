@@ -2,7 +2,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
              x:Class="KDP_EC.App.Views.Farms.EditFarms"
-             Title="">
+             Title=""
+             BackgroundColor="{StaticResource Primary}">
     
     
     <Grid>
@@ -16,37 +17,37 @@
             <VerticalStackLayout Grid.Column="1" Spacing="25" Padding="30" VerticalOptions="Start">
 
             <Label Text="Nombre" />
-            <Entry Text="{Binding Name}" IsReadOnly="True" />
+                <Entry Text="{Binding Name}" IsReadOnly="True"  BackgroundColor="White"/>
 
             <Label Text="Código" />
-            <Entry Text="{Binding Code}" IsReadOnly="True" />
+                <Entry Text="{Binding Code}" IsReadOnly="True"  BackgroundColor="White" />
 
             <Label Text="FLP ID" />
-            <Entry Text="{Binding FLP_ID}" IsReadOnly="True" />
+                <Entry Text="{Binding FLP_ID}" IsReadOnly="True"  BackgroundColor="White" />
 
             <Label Text="Status FLP" />
-            <Entry Text="{Binding StatusFLP}" IsReadOnly="True" />
+                <Entry Text="{Binding StatusFLP}" IsReadOnly="True"  BackgroundColor="White" />
 
             <Label Text="Hasl" />
-                <Entry Text="{Binding HASL, StringFormat='{}{0:F2}'}" IsReadOnly="True" />
+                <Entry Text="{Binding HASL, StringFormat='{}{0:F2}'}" IsReadOnly="True"  BackgroundColor="White"/>
 
             <Label Text="Área total (Ha)" />
-                <Entry Text="{Binding TotalAreaHa, StringFormat='{}{0:F2}'}" IsReadOnly="True" />
+                <Entry Text="{Binding TotalAreaHa, StringFormat='{}{0:F2}'}" IsReadOnly="True"  BackgroundColor="White" />
 
             <Label Text="Área café (Ha)" />
-                <Entry Text="{Binding CoffeeAreaHa, StringFormat='{}{0:F2}'}" IsReadOnly="True" />
+                <Entry Text="{Binding CoffeeAreaHa, StringFormat='{}{0:F2}'}" IsReadOnly="True"  BackgroundColor="White" />
 
             <Label Text="Productividad" />
-                <Entry Text="{Binding Productivity, StringFormat='{}{0:F2}'}" IsReadOnly="True" />
+                <Entry Text="{Binding Productivity, StringFormat='{}{0:F2}'}" IsReadOnly="True"  BackgroundColor="White"/>
 
             <Label Text="Latitud" />
-                <Entry Text="{Binding Latitude, StringFormat='{}{0:F6}'}" Keyboard="Numeric" />
+                <Entry Text="{Binding Latitude, StringFormat='{}{0:F6}'}" Keyboard="Numeric"  BackgroundColor="White" />
 
             <Label Text="Longitud" />
-                <Entry Text="{Binding Longitude, StringFormat='{}{0:F6}'}" Keyboard="Numeric" />
+                <Entry Text="{Binding Longitude, StringFormat='{}{0:F6}'}" Keyboard="Numeric"  BackgroundColor="White" />
 
                 <Button Text="Agregar Coordenadas"
-        BackgroundColor="#007AFF"
+        BackgroundColor="#07BB00"
         TextColor="White"
         Clicked="OnAgregarCoordenadasClicked"
         WidthRequest="180"
@@ -54,7 +55,7 @@
         Margin="0,10,0,0"/>
 
                 <Button Text="Guardar cambios"
-        BackgroundColor="Green"
+        BackgroundColor="DarkGreen"
         TextColor="White"
         Clicked="OnGuardarCambiosClicked"
         WidthRequest="180"

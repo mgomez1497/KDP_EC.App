@@ -132,6 +132,10 @@ public partial class CreateIncomes : ContentPage
         }
     }
 
+    private async void Cancelar_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync(); // Esto vuelve a la página anterior
+    }
 
 
 
