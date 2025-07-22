@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
              x:Class="KDP_EC.App.Views.IndexPage"
-             Title="">
+             Title=""
+             BackgroundColor="{StaticResource Primary}">
     <Grid>
         <!-- Columnas: una para el sidebar, otra para el contenido -->
         <Grid.ColumnDefinitions>

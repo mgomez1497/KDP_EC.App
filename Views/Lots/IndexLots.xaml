@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
              x:Class="KDP_EC.App.Views.Lots.IndexLots"
-             Title="Lotes">
+             Title="Lotes"
+             BackgroundColor="{StaticResource Primary}">
+    
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -21,12 +23,13 @@
                 <!-- Picker de fincas -->
                 <Picker x:Name="farmPickerLots"
                         Title="Seleccione una finca"
-                        TitleColor="Gray" 
+                        TitleColor="Black" 
+                        BackgroundColor="White"
                         SelectedIndexChanged="OnFarmSelected"/>
 
                 <!-- Botón para obtener lotes -->
                 <Button Text="Obtener Lotes"
-                        BackgroundColor="#007AFF"
+                        BackgroundColor="#07BB00"
                         TextColor="White"
                         Clicked="OnGetLots" />
                 
@@ -39,7 +42,7 @@
                 <!-- Tabla de lotes -->
                 <CollectionView x:Name="lotsCollection">
                     <CollectionView.Header>
-                        <Grid Padding="5" BackgroundColor="Green">
+                        <Grid Padding="5" BackgroundColor="#07BB00">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="2*" />
                                 <!-- Nombre del lote -->
@@ -56,27 +59,32 @@
                             <Label Text="Nombre del lote" Grid.Column="0" 
                                    FontAttributes="Bold"
                                    HorizontalOptions="Center" 
-                                   HorizontalTextAlignment="Center" />
+                                   HorizontalTextAlignment="Center"
+                                   TextColor="White"/>
                             
                             <Label Text="Hectáreas" Grid.Column="1" 
                                    FontAttributes="Bold" 
                                    HorizontalOptions="Center" 
-                                   HorizontalTextAlignment="Center" />
+                                   HorizontalTextAlignment="Center" 
+                                   TextColor="White"/>
                             
                             <Label Text="Distancia entre árboles" Grid.Column="2" 
                                    FontAttributes="Bold" 
                                    HorizontalOptions="Center" 
-                                   HorizontalTextAlignment="Center" />
+                                   HorizontalTextAlignment="Center" 
+                                   TextColor="White"/>
                             
                             <Label Text="Número de árboles" Grid.Column="3" 
                                    FontAttributes="Bold" 
                                    HorizontalOptions="Center" 
-                                   HorizontalTextAlignment="Center" />
+                                   HorizontalTextAlignment="Center" 
+                                   TextColor="White"/>
                             
                             <Label Text="Acciones" Grid.Column="4" 
                                    FontAttributes="Bold"
                                    HorizontalOptions="Center" 
-                                   HorizontalTextAlignment="Center" />
+                                   HorizontalTextAlignment="Center" 
+                                   TextColor="White"/>
                         </Grid>
                     </CollectionView.Header>
 
@@ -113,12 +121,12 @@
                                              Spacing="5"
                                              Grid.Column="4">
                                     <Button Text="Editar"
-                                            BackgroundColor="LightGray"
+                                            BackgroundColor="#07BB00"
                                             Clicked="OnUpdateView"
                                             
                                            />
                                     <Button Text="Eliminar"
-                                            BackgroundColor="LightGray"
+                                            BackgroundColor="DarkGreen"
                                             />            
                                 </StackLayout>
                             </Grid>

@@ -3,8 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
              x:Class="KDP_EC.App.Views.FloweringRecords.CreateFloweringRecords"
-             Title="CreateFloweringRecords">
-    <Grid >
+             Title="CreateFloweringRecords"
+             BackgroundColor="{StaticResource Primary}">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="*"/>
@@ -47,7 +48,7 @@
                 <Button x:Name="ImagenButton"
                 Text="Adjuntar Imagen"
                 Clicked="ImagenButton_Clicked"
-                BackgroundColor="#e7763d" 
+                BackgroundColor="#07BB00" 
                 TextColor="White"
                 WidthRequest="180"
                 HorizontalOptions="Start"
@@ -58,7 +59,7 @@
                     <Button x:Name="GuardarButton"
                     Text="Guardar"
                     Clicked="GuardarButton_Clicked"
-                    BackgroundColor="#e7763d" 
+                    BackgroundColor="#07BB00" 
                     TextColor="White"
                     WidthRequest="180"
                     HorizontalOptions="Start"
@@ -66,11 +67,12 @@
                     />
 
                     <Button Text="Cancelar"
-                    BackgroundColor="#e7763d"
+                    BackgroundColor="Darkgreen"
                     TextColor="White"
                     WidthRequest="180"
                     HorizontalOptions="Start"
-                    Margin="0,10,0,0"/>
+                    Margin="0,10,0,0"
+                    Clicked="Cancelar_Clicked"/>
 
                 </HorizontalStackLayout>
 

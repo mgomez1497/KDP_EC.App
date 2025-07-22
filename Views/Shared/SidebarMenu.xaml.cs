@@ -22,10 +22,10 @@ public partial class SidebarMenu : ContentView
 
         var rol = Preferences.Get("Rol", "");
 
-        if (rol != "5fc8995f-191a-4956-ba16-50606261bc96")
-        {
-            UserManagementGrid.IsVisible = false;
-        }
+        //if (rol != "5fc8995f-191a-4956-ba16-50606261bc96")
+        //{
+        //    UserManagementGrid.IsVisible = false;
+        //}
 
         if (rol != "48818893-94f0-4a52-afcc-2756480712bd")
         {

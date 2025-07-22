@@ -9,6 +9,8 @@ public partial class AddLots : ContentPage
     private readonly Lots_VarietysRepository _lots_VarietysRepository;
     private readonly Renewal_TypesRepository _renewal_TypesRepository;
 
+    private DateTime _workDate = DateTime.Today;
+
     public AddLots(Guid farmId)
 	{
 		InitializeComponent();
@@ -20,8 +22,8 @@ public partial class AddLots : ContentPage
         BindingContext = new LotModel
         {
            
-            FarmId = Guid.Parse(farmId.ToString())
-            
+            FarmId = Guid.Parse(farmId.ToString()),
+            WorkDate = DateTime.Today
         };
 
 

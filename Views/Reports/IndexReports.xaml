@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
              x:Class="KDP_EC.App.Views.Reports.IndexReports"
-             Title="IndexReports">
+             Title="IndexReports"
+             BackgroundColor="{StaticResource Primary}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200" />

@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:shared="clr-namespace:KDP_EC.App.Views.Shared"
              x:Class="KDP_EC.App.Views.Reports.BalanceCostCentersReports"
-             Title="BalanceCostCentersReports">
+             Title="BalanceCostCentersReports"
+             BackgroundColor="{StaticResource Primary}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200" />
@@ -30,7 +31,8 @@
                 <CollectionView x:Name="reportListView">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Frame BorderColor="DarkGray"
+                            <Frame BackgroundColor="#2D2D2D" 
+                                BorderColor="DarkGray"
                                    CornerRadius="10"
                                    Margin="10"
                                    Padding="15"
@@ -42,12 +44,12 @@
                                            TextColor="DarkGreen" />
                                     <Grid ColumnDefinitions="*,*">
                                         <VerticalStackLayout Grid.Column="0" HorizontalOptions="Start">
-                                            <Label Text="Promedio Mi finca:" />
-                                            <Label Text="{Binding FarmAverage, StringFormat='{0:F2}'}" />
+                                            <Label Text="Promedio Mi finca:"  TextColor="White"/>
+                                            <Label Text="{Binding FarmAverage, StringFormat='{0:F2}'}"  TextColor="White" />
                                         </VerticalStackLayout>
                                         <VerticalStackLayout Grid.Column="1" HorizontalOptions="End">
-                                            <Label Text="Promedio Otras Fincas:" />
-                                            <Label Text="{Binding ExportAverage, StringFormat='{0:F2}'}" />
+                                            <Label Text="Promedio Otras Fincas:"  TextColor="White"/>
+                                            <Label Text="{Binding ExportAverage, StringFormat='{0:F2}'}"  TextColor="White" />
                                         </VerticalStackLayout>
                                     </Grid>
                                 </VerticalStackLayout>
