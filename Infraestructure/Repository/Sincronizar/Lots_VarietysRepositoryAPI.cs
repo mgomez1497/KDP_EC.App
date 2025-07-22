@@ -13,7 +13,7 @@ namespace KDP_EC.App.Infraestructure.Repository.Sincronizar
         private readonly ConsumoApi _api;
         public Lots_VarietysRepositoryAPI()
         {
-            _api = new ConsumoApi("https://localhost:7149/api/Lots_Varietys/");
+            _api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/Lots_Varietys/");
         }
         public async Task<List<Lots_Varietys>> ObtenerVariedadesLotes()
         {

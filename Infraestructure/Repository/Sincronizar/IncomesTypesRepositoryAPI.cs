@@ -14,7 +14,7 @@ namespace KDP_EC.App.Infraestructure.Repository.Sincronizar
 
         public IncomesTypesRepositoryAPI()
         {
-            _api = new ConsumoApi("https://localhost:7149/api/IncomesTypes/");
+            _api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/IncomesTypes/");
         }
 
         public async Task<List<IncomesTypes>>ObtenerTiposIngreso()

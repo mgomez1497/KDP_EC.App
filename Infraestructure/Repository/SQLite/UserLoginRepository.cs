@@ -32,7 +32,7 @@ namespace KDP_EC.App.Infraestructure.Repository.SQLite
 
         public async Task<LoginResponse> LoginUsuario(string username, string password)
         {
-            var api = new ConsumoApi("https://localhost:7149/api/Account/");
+            var api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/Account/");
 
             var loginData = new Users
             {
@@ -67,7 +67,7 @@ namespace KDP_EC.App.Infraestructure.Repository.SQLite
 
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-            var apiUrl = $"https://localhost:7149/api/Account/userinfo?UserId={userId}";
+            var apiUrl = $"http://sandboxapiec.localpartners.ch/api/Account/userinfo?UserId={userId}";
             var response = await _httpClient.GetAsync(apiUrl);
 
             if (!response.IsSuccessStatusCode)

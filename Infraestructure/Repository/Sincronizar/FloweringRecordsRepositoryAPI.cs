@@ -15,7 +15,7 @@ namespace KDP_EC.App.Infraestructure.Repository.Sincronizar
 
         public FloweringRecordsRepositoryAPI()
         {
-            _api = new ConsumoApi("https://localhost:7149/api/FloweringRecords/");
+            _api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/FloweringRecords/");
         }
 
         public async Task<List<FloweringRecords>> ObtenerFloracionesporUserId(Guid UserId)

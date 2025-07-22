@@ -25,7 +25,7 @@ namespace KDP_EC.App.Infraestructure.Repository.SQLite
 
         public async Task<List<Person>> GetPersons()
         {
-            var api = new ConsumoApi("https://localhost:7149/api/Person/");
+            var api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/Person/");
             try
             {
                 var personsResult = await api.GetAsync<List<Person>>("getPersons");

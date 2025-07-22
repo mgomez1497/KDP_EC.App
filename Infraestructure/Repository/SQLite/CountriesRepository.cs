@@ -25,7 +25,7 @@ namespace KDP_EC.App.Infraestructure.Repository.SQLite
         }
         public async Task<List<Countries>> GetCountries()
         {
-            var api = new ConsumoApi("https://localhost:7149/api/Country/");
+            var api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/Country/");
 
             try
             {

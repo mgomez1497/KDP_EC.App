@@ -13,7 +13,7 @@ namespace KDP_EC.App.Infraestructure.Repository.Sincronizar
         private readonly ConsumoApi _api;
         public CitiesRepositoryAPI()
         {
-            _api = new ConsumoApi("https://localhost:7149/api/Cities/");
+            _api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/Cities/");
         }
         public async Task<List<Cities>> ObtenerCiudades()
         {

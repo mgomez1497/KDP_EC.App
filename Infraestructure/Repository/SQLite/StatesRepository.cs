@@ -23,7 +23,7 @@ namespace KDP_EC.App.Infraestructure.Repository.SQLite
         }
         public async Task<List<States>> GetStates()
         {
-            var api = new ConsumoApi("https://localhost:7149/api/States/");
+            var api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/States/");
             try
             {
                 var statesResult = await api.GetAsync<List<States>>("getStates");

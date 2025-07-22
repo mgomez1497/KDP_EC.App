@@ -13,7 +13,7 @@ namespace KDP_EC.App.Infraestructure.Repository.Sincronizar
         private readonly ConsumoApi _api;
         public ActivityTypeRepositoryAPI()
         {
-            _api = new ConsumoApi("https://localhost:7149/api/ActivityType/");
+            _api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/ActivityType/");
         }
         public async Task<List<ActivityType>> ObtenerTiposActividad()
         {

@@ -15,7 +15,7 @@ namespace KDP_EC.App.Infraestructure.Repository.Sincronizar
 
         //public VillagesRepositoryAPI()
         //{
-        //    _api = new ConsumoApi("https://localhost:7149/api/Villages/");
+        //    _api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/Villages/");
         //}
 
         //public async Task<List<Villages>> ObtenerPueblos(int page = 1, int pageSize = 100)

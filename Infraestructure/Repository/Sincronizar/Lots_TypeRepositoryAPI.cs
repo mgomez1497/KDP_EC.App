@@ -15,7 +15,7 @@ namespace KDP_EC.App.Infraestructure.Repository.Sincronizar
 
         public Lots_TypeRepositoryAPI()
         {
-            _api = new ConsumoApi("https://localhost:7149/api/Lots_Type/");
+            _api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/Lots_Type/");
         }
 
         public async Task<List<Lots_Type>> ObtenerTiposLotes()

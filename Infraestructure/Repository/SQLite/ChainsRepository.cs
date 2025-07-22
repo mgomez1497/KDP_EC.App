@@ -27,7 +27,7 @@ namespace KDP_EC.App.Infraestructure.Repository.SQLite
 
         public async Task<List<Chains>> GetChains()
         {
-            var api = new ConsumoApi("https://localhost:7149/api/Chain/");
+            var api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/Chain/");
             try
             {
                 var chainsResult = await api.GetAsync<List<Chains>>("getChains");

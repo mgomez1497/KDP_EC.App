@@ -14,7 +14,7 @@ namespace KDP_EC.App.Infraestructure.Repository.Sincronizar
 
         public ProductivityReportRepositoryAPI()
         {
-            _api = new ConsumoApi("https://localhost:7149/api/ProductivityReport/");
+            _api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/ProductivityReport/");
         }
 
         public async Task<List<ProductivityReport>> ObtenerProductivityReports(Guid FarmId)

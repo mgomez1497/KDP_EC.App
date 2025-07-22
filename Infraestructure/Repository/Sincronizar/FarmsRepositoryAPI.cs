@@ -14,7 +14,7 @@ namespace KDP_EC.App.Infraestructure.Repository.Sincronizar
         private readonly ConsumoApi _api;
         public FarmsRepositoryAPI()
         {
-            _api = new ConsumoApi("https://localhost:7149/api/Farms/");
+            _api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/Farms/");
         }
         public async Task<List<FarmInfoViewModel>> ObtenerFincasporId(string Identification)
         {

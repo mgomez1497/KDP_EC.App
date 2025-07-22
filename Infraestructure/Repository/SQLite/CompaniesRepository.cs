@@ -26,7 +26,7 @@ namespace KDP_EC.App.Infraestructure.Repository.SQLite
 
         public async Task<List<Company>> GetCompanies()
         {
-            var api = new ConsumoApi("https://localhost:7149/api/Company/");
+            var api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/Company/");
 
             try
             {

@@ -15,7 +15,7 @@ namespace KDP_EC.App.Infraestructure.Repository.Sincronizar
 
         public CoffeeSalesRepositoryAPI()
         {
-            _api = new ConsumoApi("https://localhost:7149/api/CoffeeSalesRep/");
+            _api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/CoffeeSalesRep/");
 
             
         }

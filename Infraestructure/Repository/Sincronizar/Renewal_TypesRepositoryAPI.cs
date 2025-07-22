@@ -14,7 +14,7 @@ namespace KDP_EC.App.Infraestructure.Repository.Sincronizar
 
         public Renewal_TypesRepositoryAPI()
         {
-            _api = new ConsumoApi("https://localhost:7149/api/Renewal_Types/");
+            _api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/Renewal_Types/");
         }
 
         public async Task<List<Renewal_Types>> ObtenerTiposRenovacion()

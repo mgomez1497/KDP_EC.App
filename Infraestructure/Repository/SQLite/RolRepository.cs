@@ -23,7 +23,7 @@ namespace KDP_EC.App.Infraestructure.Repository.SQLite
         }
         public async Task<List<Rols>> GetRoles()
         {
-            var api = new ConsumoApi("https://localhost:7149/api/Rols/");
+            var api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/Rols/");
             try
             {
                 var rolesResult = await api.GetAsync<List<Rols>>("getRols");

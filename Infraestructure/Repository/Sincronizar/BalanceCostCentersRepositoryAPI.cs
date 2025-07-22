@@ -14,7 +14,7 @@ namespace KDP_EC.App.Infraestructure.Repository.Sincronizar
 
         public BalanceCostCentersRepositoryAPI()
         {
-            _api = new ConsumoApi("https://localhost:7149/api/BalanceCostCenters/");
+            _api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/BalanceCostCenters/");
 
         }
 

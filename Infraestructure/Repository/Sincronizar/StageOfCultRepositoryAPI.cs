@@ -13,7 +13,7 @@ namespace KDP_EC.App.Infraestructure.Repository.Sincronizar
         private readonly ConsumoApi _api;
         public StageOfCultRepositoryAPI()
         {
-            _api = new ConsumoApi("https://localhost:7149/api/StageOfCult/");
+            _api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/StageOfCult/");
         }
         public async Task<List<StageOfCult>> ObtenerEtapasDeCultivo()
         {

@@ -14,7 +14,7 @@ namespace KDP_EC.App.Infraestructure.Repository.Sincronizar
 
         public LotsRepositoryAPI()
         {
-            _api = new ConsumoApi("https://localhost:7149/api/Lots/");
+            _api = new ConsumoApi("http://sandboxapiec.localpartners.ch/api/Lots/");
         }
 
         public async Task<List<Lots>> ObtenerLotesporFarmId(Guid farmId)
